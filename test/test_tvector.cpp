@@ -220,7 +220,7 @@ TEST(TVector, can_subtract_vectors_with_equal_size)
 	}
 	v3 = v1 - v;
 	int s = v2 == v3;
-	EXPECT_EQ(s, 1);
+	EXPECT_EQ(v2, v3);
 }
 
 TEST(TVector, cant_subtract_vectors_with_not_equal_size)
@@ -250,7 +250,7 @@ TEST(TVector, can_multiply_vectors_with_equal_size)
 	}
 	v3 = v1 * v;
 	int s = v2 == v3;
-	EXPECT_EQ(s, 1);
+	EXPECT_EQ(v2, v3);
 }
 
 TEST(TVector, cant_multiply_vectors_with_not_equal_size)

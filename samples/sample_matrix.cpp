@@ -10,24 +10,27 @@
 //---------------------------------------------------------------------------
 void main()
 {
-  /*TMatrix<int> a(5), b(5), c(5);
-  int i, j;
   setlocale(LC_ALL, "Russian");
+  TMatrix<int> q(3), w(3), e(3);
+  int i, j;
   cout << "Тестирование программ поддержки представления треугольных матриц"
-    << endl;
-  for (i = 0; i < 5; i++)
-    for (j = 0; j < 5; j++ )
-    {
-      a[i][j] =  i + j;
-      b[i][j] = (i * 10 + j) * 100;
-    }
-  c = a + b;
-  cout << "Matrix a = " << endl << a << endl;
-  cout << "Matrix b = " << endl << b << endl;
-  cout << "Matrix c = a + b" << endl << c << endl;*/
+	  << endl;
+  //cin >> q;
+  //TMatrix<int> w(q);
+  //cin >> w;
+  for (i = 0; i < 3; i++)
+	  for (j = i; j < 3; j++)
+	  {
+		  q[i][j] = i;
+		  w[i][j] = i+2;
+	  }
+  e = q - w;
+  cout << (q != w) << endl;
+  cout << "Matrix q = " << endl << q << endl;
+  cout << "Matrix w = " << endl << w << endl;
+  cout << "Matrix e = q + w" << endl << e << endl;
   TVector<int> a(5), b(5), c(5);
   int s;
-  setlocale(LC_ALL, "Russian");
   cout << "Тестирование программ поддержки представления векторов и операций над ними"
     << endl;
   for (int i = 0; i < 5; i++) {
